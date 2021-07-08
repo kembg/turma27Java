@@ -3,7 +3,7 @@ package introducao;
 import java.util.Scanner;
 import java.lang.Math;
 
-public class Lista12Ex4 {
+public class Lista2Ex4 {
 
 	public static void main(String[] args) {
 		/*4-	Faça um programa em que permita a entrada de um número qualquer e 
