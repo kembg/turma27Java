@@ -27,6 +27,7 @@ public class ListaVetoresMatrizes1 {
 
 		}
 		System.out.println("A maior nota foi : "+maiorNota);
+		leia.close();
 	}
 
 }

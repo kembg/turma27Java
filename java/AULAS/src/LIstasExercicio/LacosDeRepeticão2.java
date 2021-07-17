@@ -21,6 +21,7 @@ public class LacosDeRepeticão2 {
 		}
 		System.out.println("Quantidade de números pares : "+numerosPar);
 		System.out.println("Quantidade de números ímpares : "+numerosImpar);
+		leia.close();
 	}
 
 }

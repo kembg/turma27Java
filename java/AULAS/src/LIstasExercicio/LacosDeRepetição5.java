@@ -21,6 +21,7 @@ public class LacosDeRepetição5 {
 		}while(numeros!=0);
 		
 		System.out.println("A soma dos números digitados : "+ somatorio);
+		leia.close();
 
 	}
 

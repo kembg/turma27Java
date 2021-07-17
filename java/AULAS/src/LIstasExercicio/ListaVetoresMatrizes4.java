@@ -27,7 +27,7 @@ public class ListaVetoresMatrizes4 {
 		}
 		System.out.println("A soma dos valores da matriz : "+somatorio);
 		System.out.println("A diagonal principal tem valor : "+diagonal);
-
+		leia.close();
 	}
 
 }

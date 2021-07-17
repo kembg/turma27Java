@@ -42,5 +42,6 @@ public class ListaVetoresMatrizes3 {
 					System.out.printf("\t %d \t", matrizM2[linha][coluna]);
 				}System.out.println();
 			}
+		leia.close();
 	}
 }

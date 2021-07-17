@@ -24,5 +24,6 @@ public class LacosDeRepetição3 {
 		}
 		System.out.println("Pessoas com menos de 21 anos : "+pessoasMenosDe21);
 		System.out.println("Pessoas com mais de 50 anos : "+pessoasMaisDe50);
+		leia.close();
 	}
 }

@@ -34,7 +34,7 @@ public class ListaVetoresMatrizes2 {
 		System.out.println("A média  aritmética dos lançamentos : "+mediaValor);
 		System.out.println("A maior pontuação : "+ maiorValor);
 		System.out.println("A quanitdade de vezes que a maior pontuação apareceu : "+quantMaiorValor);
-
+		leia.close();
 	}
 
 }

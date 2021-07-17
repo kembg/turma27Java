@@ -55,7 +55,7 @@ public class LacosDeRepetição4 {
 		System.out.println("número de outros calmos : "+quantiOutrosCalmos );
 		System.out.println("número de pessoas nervosas com mais de 40 anos : "+quantiNervososMaisde40Anos);
 		System.out.println("número de pessoas calmas com menos de 18 anos : "+quantiCalmasMenosDe18Anos);
-		
+		leia.close();
 	}
 
 }

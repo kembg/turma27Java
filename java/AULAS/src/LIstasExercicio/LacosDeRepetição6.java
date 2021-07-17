@@ -24,6 +24,7 @@ public class LacosDeRepetição6 {
 		}while(numeros!=0);
 		mediaMultDe3=multDe3/quantMultDe3;
 		System.out.println("A media dos números múltiplos de 3 digitados : "+mediaMultDe3);
+		leia.close();
 
 	}
 
