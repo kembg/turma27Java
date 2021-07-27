@@ -21,9 +21,8 @@ public class preguica extends serVivo {
 		subirArvore = true;
 		System.out.println("Subindo árvore...");
 	}
-	@override 
-	public void emitirSom(boolean barulho) {
-		barulho = true;
+	
+	public void emitirSom() {
 		System.out.println("a mimir");
 	}
 }

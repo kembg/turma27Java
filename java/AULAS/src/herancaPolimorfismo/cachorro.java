@@ -22,9 +22,9 @@ public class cachorro extends serVivo {
 		System.out.println("Correndo...");
 	}
 	
-	@override 
-	public void emitirSom(boolean barulho) {
-		barulho = true;
+	
+	public void emitirSom() {
+		
 		System.out.println("AU AU AU");
 	}
 	
