@@ -1,11 +1,9 @@
-package org.generation.blogPessoal.controller;
+package org.generation.farmacia.controller;
 
 import java.util.List;
 
-import org.generation.blogPessoal.model.Categoria;
-import org.generation.blogPessoal.model.Produto;
-import org.generation.blogPessoal.repository.CategoriaRepository;
-import org.generation.blogPessoal.repository.ProdutoRepository;
+import org.generation.farmacia.model.Categoria;
+import org.generation.farmacia.repository.CategoriaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,44 +18,37 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/produtos")
+@RequestMapping("/categoria")
 @CrossOrigin("*")
-public class ProdutoController {
-
-	@Autowired
-	private ProdutoRepository repository;
+public class CategoriaController {
 	
-	//findAllCategoria
+	@Autowired
+	private CategoriaRepository repository;
+	
 	@GetMapping
-	public ResponseEntity<List<Produto>> GetAll(){
+	public ResponseEntity<List<Categoria>> GetAll(){
 		return ResponseEntity.ok(repository.findAll());
 	}
 	
 	@GetMapping("/{id}")
-	public ResponseEntity<Produto> GetById(@PathVariable long id){
+	public ResponseEntity<Categoria> GetAllById(@PathVariable long id){
 		return repository.findById(id)
 				.map(resp -> ResponseEntity.ok(resp))
 				.orElse(ResponseEntity.notFound().build());
 	}
 	
-	//findByDescricaoCategoria
-	@GetMapping("/nome/{nome}")
-	public ResponseEntity<List<Produto>> GetByNome(@PathVariable String nome){
-		return ResponseEntity.ok(repository.findAllByNomeContainingIgnoreCase(nome));
-	}
-	
-	@GetMapping("preco/{preco}")
-	public ResponseEntity<List<Produto>> GetByPreco(@PathVariable double preco){
-		return ResponseEntity.ok(repository.findAllByPreco(preco));
+	@GetMapping("/descricao/{descricao}")
+	public ResponseEntity<List<Categoria>> GetAllByDescricao(@PathVariable String descricao){
+		return ResponseEntity.ok(repository.findAllByDescricaoContainingIgnoreCase(descricao));
 	}
 	
 	@PostMapping
-	public ResponseEntity<Produto> Post(@RequestBody Produto post){
+	public ResponseEntity<Categoria> Post(@RequestBody Categoria post){
 		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(post));
 	}
 	
 	@PutMapping
-	public ResponseEntity<Produto> Put(@RequestBody Produto put){
+	public ResponseEntity<Categoria> Put(@RequestBody Categoria put){
 		return ResponseEntity.status(HttpStatus.OK).body(repository.save(put));
 	}
 	

@@ -1,11 +1,9 @@
-package org.generation.blogPessoal.controller;
+package org.generation.farmacia.controller;
 
 import java.util.List;
 
-import org.generation.blogPessoal.model.Categoria;
-import org.generation.blogPessoal.model.Produto;
-import org.generation.blogPessoal.repository.CategoriaRepository;
-import org.generation.blogPessoal.repository.ProdutoRepository;
+import org.generation.farmacia.model.Produto;
+import org.generation.farmacia.repository.ProdutoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -27,7 +25,6 @@ public class ProdutoController {
 	@Autowired
 	private ProdutoRepository repository;
 	
-	//findAllCategoria
 	@GetMapping
 	public ResponseEntity<List<Produto>> GetAll(){
 		return ResponseEntity.ok(repository.findAll());
@@ -40,15 +37,9 @@ public class ProdutoController {
 				.orElse(ResponseEntity.notFound().build());
 	}
 	
-	//findByDescricaoCategoria
-	@GetMapping("/nome/{nome}")
+	@GetMapping("nome/{nome}")
 	public ResponseEntity<List<Produto>> GetByNome(@PathVariable String nome){
 		return ResponseEntity.ok(repository.findAllByNomeContainingIgnoreCase(nome));
-	}
-	
-	@GetMapping("preco/{preco}")
-	public ResponseEntity<List<Produto>> GetByPreco(@PathVariable double preco){
-		return ResponseEntity.ok(repository.findAllByPreco(preco));
 	}
 	
 	@PostMapping
